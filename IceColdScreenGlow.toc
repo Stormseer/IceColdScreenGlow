@@ -1,0 +1,7 @@
+## Interface: 120000
+## Title: IceCold Screen Glow
+## Author: Aryella
+## Version: 0.1
+## Notes: Just a screen glow effect while Ice Cold is running.
+
+IceColdScreenGlow.lua
