@@ -70,3 +70,35 @@ CreateEdge(root, "TOP", r, g, b, a)
 CreateEdge(root, "BOTTOM", r, g, b, a)
 CreateEdge(root, "LEFT", r, g, b, a)
 CreateEdge(root, "RIGHT", r, g, b, a)
+
+root:Hide()
+
+local SPELL_ID = 414658
+local HIDE_DELAY = 6
+
+local hideTimer -- handle so we can cancel/restart
+
+local eventFrame = CreateFrame("Frame")
+eventFrame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
+eventFrame:SetScript("OnEvent", function(_, _, unit, _, spellID)
+    if unit ~= "player" then
+        return
+    end
+
+    if spellID ~= SPELL_ID then
+        return
+    end
+
+    -- Show the glow
+    root:Show()
+    root:SetAlpha(1)
+
+    -- Restart hide timer
+    if hideTimer then
+        hideTimer:Cancel()
+    end
+
+    hideTimer = C_Timer.NewTimer(HIDE_DELAY, function()
+        root:Hide()
+    end)
+end)
