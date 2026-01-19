@@ -2,6 +2,7 @@
 ## Title: IceCold Screen Glow
 ## Author: Aryella
 ## Category: Ary's Personals
+## IconTexture: Interface/AddOns/IceColdScreenGLow/arys-intellect
 ## Version: 0.1
 ## Notes: Just a screen glow effect while Ice Cold is running.
 
