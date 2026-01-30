@@ -6,4 +6,7 @@
 ## Version: 0.1
 ## Notes: Just a screen glow effect while Ice Cold is running.
 
+LibCustomGlow-1.0/LibStub/LibStub.lua
+LibCustomGlow-1.0/LibCustomGlow-1.0.lua
 IceColdScreenGlow.lua
+GlowOnSurge.lua
