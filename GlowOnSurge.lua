@@ -16,7 +16,7 @@ local function hideGlow()
     end
 end
 
-
+--[[
 local eventFrame = CreateFrame("Frame")
 eventFrame:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 eventFrame:SetScript("OnEvent", function(_, _, unit, _, spellID)
@@ -36,3 +36,4 @@ eventFrame:SetScript("OnEvent", function(_, _, unit, _, spellID)
         hideGlow()
     end)
 end)
+--]]
